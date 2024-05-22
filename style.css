@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("./assets/fonts/Poppins-Bold.ttf"),
+    url("./assets/fonts/Poppins-BoldItalic.ttf"),
+    url("./assets/fonts/Poppins-ExtraBold.ttf"),
+    url("./assets/fonts/Poppins-ExtraBoldItalic.ttf"),
+    url("./assets/fonts/Poppins-Italic.ttf"),
+    url("./assets/fonts/Poppins-Regular.ttf");
+  font-weight: 400, 700, 800;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+}
+
+p {
+  margin: 0px;
+}
+
+.age-calculator {
+  max-width: 730px;
+  width: calc(100% - 110px);
+  padding: 3.82%;
+  margin: 4%;
+
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 200px 20px;
+}
+
+.user-input-container {
+  display: flex;
+  gap: 4.8%;
+}
+
+.user-input__area {
+  width: 21.92%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-input__title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user-input {
+  padding: 25px;
+  width: calc(100% - 52px);
+  height: 18px;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 88%);
+  color: hsl(0, 0%, 8%);
+}
+
+.user-input::placeholder {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.user-input__error--hidden {
+  font-weight: 400;
+  font-style: italic;
+  color: hsl(0, 100%, 67%);
+
+  height: 0px;
+  visibility: hidden;
+}
+
+.calculate-container {
+  display: flex;
+  align-items: center;
+}
+
+.calculate__line {
+  width: 100%;
+  height: 100%;
+  border-color: hsla(0, 0%, 100%, 0.75);
+}
+
+.calculate__btn {
+  width: 13.7%;
+  aspect-ratio: 1 / 1;
+  background-color: hsl(259, 100%, 65%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.result-container {
+  margin-top: 30px;
+}
+
+.result__title {
+  font-size: 80px;
+  font-weight: 800;
+  font-style: italic;
+  color: hsl(0, 0%, 8%);
+}
+
+.result {
+  color: hsl(259, 100%, 65%);
+}

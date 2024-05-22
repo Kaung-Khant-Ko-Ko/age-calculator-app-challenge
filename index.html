@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <section role="calculator" class="age-calculator">
+      <div class="user-input-container">
+        <div class="user-input__area">
+          <p class="user-input__title">Day</p>
+          <input
+            type="text"
+            name="day-input"
+            id="day-input"
+            class="user-input"
+            placeholder="DD"
+            autocomplete="bday-day"
+          />
+          <p id="error-day" class="user-input__error--hidden">
+            This field is required
+          </p>
+        </div>
+        <div class="user-input__area">
+          <p class="user-input__title">Month</p>
+          <input
+            type="text"
+            name="month-input"
+            id="month-input"
+            class="user-input"
+            placeholder="MM"
+            autocomplete="bday-month"
+          />
+          <p id="error-month" class="user-input__error--hidden">
+            This field is required
+          </p>
+        </div>
+        <div class="user-input__area">
+          <p class="user-input__title">Year</p>
+          <input
+            type="text"
+            name="year-input"
+            id="year-input"
+            class="user-input"
+            placeholder="YYYY"
+            autocomplete="bday-year"
+          />
+          <p id="error-year" class="user-input__error--hidden">
+            This field is required
+          </p>
+        </div>
+      </div>
+      <div class="calculate-container">
+        <hr class="calculate__line" />
+        <div id="calculate-btn" class="calculate__btn">
+          <img src="./assets/images/icon-arrow.svg" alt="Arrow icon" />
+        </div>
+      </div>
+      <div class="result-container">
+        <p class="result__title">
+          <span id="result-year" class="result">- -</span> years
+        </p>
+        <p class="result__title">
+          <span id="result-month" class="result">- -</span> months
+        </p>
+        <p class="result__title">
+          <span id="result-day" class="result">- -</span> days
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
