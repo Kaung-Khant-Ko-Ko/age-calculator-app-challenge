@@ -22,42 +22,48 @@
         <div class="user-input__area">
           <p class="user-input__title">Day</p>
           <input
-            type="text"
+            type="number"
             name="day-input"
             id="day-input"
             class="user-input"
             placeholder="DD"
             autocomplete="bday-day"
           />
-          <p id="error-day" class="user-input__error--hidden">
+          <p id="error-day" class="user-input__error user-input__error--hidden">
             This field is required
           </p>
         </div>
         <div class="user-input__area">
           <p class="user-input__title">Month</p>
           <input
-            type="text"
+            type="number"
             name="month-input"
             id="month-input"
             class="user-input"
             placeholder="MM"
             autocomplete="bday-month"
           />
-          <p id="error-month" class="user-input__error--hidden">
+          <p
+            id="error-month"
+            class="user-input__error user-input__error--hidden"
+          >
             This field is required
           </p>
         </div>
         <div class="user-input__area">
           <p class="user-input__title">Year</p>
           <input
-            type="text"
+            type="number"
             name="year-input"
             id="year-input"
             class="user-input"
             placeholder="YYYY"
             autocomplete="bday-year"
           />
-          <p id="error-year" class="user-input__error--hidden">
+          <p
+            id="error-year"
+            class="user-input__error user-input__error--hidden"
+          >
             This field is required
           </p>
         </div>
@@ -80,5 +86,7 @@
         </p>
       </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
