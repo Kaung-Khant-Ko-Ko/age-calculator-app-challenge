@@ -140,6 +140,10 @@ p {
   font-weight: 800;
   font-style: italic;
   color: hsl(0, 0%, 8%);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
 }
 
 .result {

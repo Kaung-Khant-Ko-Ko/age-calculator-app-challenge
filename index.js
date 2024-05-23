@@ -70,6 +70,33 @@ $("#calculate-btn").click(function () {
     $(".user-input__title").removeClass("error-title");
     $(".user-input").removeClass("error-input");
   }
+
+  if (validate(input_day, input_month, input_year)) {
+    result = calculate(input_day, input_month, input_year);
+    $("#result-year").animate({
+      width: "toggle",
+      height: $(".result").height(),
+    });
+    $("#result-month").animate({
+      width: "toggle",
+      height: $(".result").height(),
+    });
+    $("#result-day").animate({
+      width: "toggle",
+      height: $(".result").height(),
+    });
+
+    setTimeout(() => {
+      $("#result-year").text(result.year);
+      $("#result-year").animate({ width: "toggle" });
+
+      $("#result-month").text(result.month);
+      $("#result-month").animate({ width: "toggle" });
+
+      $("#result-day").text(result.day);
+      $("#result-day").animate({ width: "toggle" });
+    }, 400);
+  }
 });
 
 function validateDay(day, month, year) {
@@ -109,4 +136,39 @@ function validateMonth(month) {
 
 function validateYear(year) {
   return year > 0 && year <= new Date().getFullYear();
+}
+
+function validate(day, month, year) {
+  return (
+    validateDay(day, month, year) && validateMonth(month) && validateYear(year)
+  );
+}
+
+function calculate(day, month, year) {
+  let now = new Date();
+  let currentYear = now.getFullYear();
+  let currentMonth = now.getMonth() + 1;
+  let currentDate = now.getDate();
+
+  let ageYear = null;
+  let ageMonth = null;
+  let ageDay = null;
+
+  ageYear = currentYear - year;
+
+  if (currentMonth >= month) {
+    ageMonth = currentMonth - month;
+  } else {
+    ageMonth = 12 + (currentMonth - month);
+    ageYear--;
+  }
+
+  if (currentDate >= day) {
+    ageDay = currentDate - day;
+  } else {
+    ageDay = 30 + (currentDate - day);
+    ageMonth--;
+  }
+
+  return { year: ageYear, month: ageMonth, day: ageDay };
 }
