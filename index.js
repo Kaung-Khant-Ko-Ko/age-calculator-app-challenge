@@ -172,3 +172,17 @@ function calculate(day, month, year) {
 
   return { year: ageYear, month: ageMonth, day: ageDay };
 }
+
+$(window).resize(function () {
+  if (window.innerWidth <= 750) {
+    let pos_horizonal = $(".calculate-container").width() / 2 - 38;
+    let pos_vertical = $(".calculate-container").height() / 2;
+    let input_width =
+      $(".user-input-container").width() / 3 -
+      $(".user-input-container").width() / 438;
+
+    $(".user-input__area").css("width", input_width);
+    $("#calculate-btn").css("left", pos_horizonal);
+    $("#calculate-btn").css("bottom", pos_vertical);
+  }
+});
